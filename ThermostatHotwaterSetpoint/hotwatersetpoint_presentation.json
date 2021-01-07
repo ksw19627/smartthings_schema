@@ -1,0 +1,133 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{hotwaterSetpoint.value}} {{hotwaterSetpoint.unit}}",
+                "alternatives": [
+                    {
+                        "key": "C",
+                        "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "F",
+                        "value": "°F",
+                        "type": "active"
+                    },
+                    {
+                        "key": "111",
+                        "value": "--",
+                        "type": "active"
+                    }
+                ]
+            }
+        ],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "온수 설정 온도",
+            "displayType": "stepper",
+            "stepper": {
+                "command": {
+                    "name": "setHotwaterSetpoint",
+                    "argumentType": "number"
+                },
+                "value": "hotwaterSetpoint.value",
+                "valueType": "number",
+                "unit:": "hotwaterSetpoint.unit",
+                "step": 1,
+                "range": [
+                    0,
+                    70
+                ],
+                "alternatives": [
+                    {
+                        "key": "C",
+                        "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "F",
+                        "value": "°F",
+                        "type": "active"
+                    },
+                    {
+                        "key": "111",
+                        "value": "--",
+                        "type": "active"
+                    }
+                ]
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "온수 설정 온도",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "hotwaterSetpoint.value",
+                    "valueType": "number",
+                    "unit": "hotwaterSetpoint.unit",
+                    "range": [
+                        0,
+                        70
+                    ],
+                    "alternatives": [
+                        {
+                            "key": "C",
+                            "value": "°C",
+                            "type": "active"
+                        },
+                        {
+                            "key": "F",
+                            "value": "°F",
+                            "type": "active"
+                        },
+                        {
+                            "key": "111",
+                            "value": "--",
+                            "type": "active"
+                        }
+                    ]
+                }
+            }
+        ],
+        "actions": [
+            {
+                "label": "{{hotwaterSetpoint.value}} {{hotwaterSetpoint.unit}}",
+                "displayType": "numberField",
+                "numberField": {
+                    "command": "setHotwaterSetpoint",
+                    "argumentType": "number",
+                    "unit": "hotwaterSetpoint.unit",
+                    "range": [
+                        0,
+                        70
+                    ],
+                    "alternatives": [
+                        {
+                            "key": "C",
+                            "value": "°C",
+                            "type": "active"
+                        },
+                        {
+                            "key": "F",
+                            "value": "°F",
+                            "type": "active"
+                        },
+                        {
+                            "key": "111",
+                            "value": "--",
+                            "type": "active"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "id": "aloneabate57300.boilerHotwaterSetpoint",
+    "version": 1
+}

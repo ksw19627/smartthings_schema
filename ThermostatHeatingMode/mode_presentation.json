@@ -1,0 +1,111 @@
+{
+    "detailView": [
+        {
+            "label": "모드 설정",
+            "displayType": "list",
+            "list": {
+                "command": {
+                    "name": "setMode",
+                    "alternatives": [
+                        {
+                            "key": "outside",
+                            "value": "외출",
+                            "type": "active"
+                        },
+                        {
+                            "key": "space",
+                            "value": "실내난방 모드",
+                            "type": "active"
+                        },
+                        {
+                            "key": "floor",
+                            "value": "온돌 모드",
+                            "type": "active"
+                        }
+                    ],
+                    "supportedValues": "supportedMode.value"
+                },
+                "state": {
+                    "label": "mode.value",
+                    "value": "mode.value",
+                    "alternatives": [
+                        {
+                            "key": "outside",
+                            "value": "외출",
+                            "type": "active"
+                        },
+                        {
+                            "key": "space",
+                            "value": "실내난방 모드",
+                            "type": "active"
+                        },
+                        {
+                            "key": "floor",
+                            "value": "온돌 모드",
+                            "type": "active"
+                        }
+                    ]
+                }
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "모드 설정",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "outside",
+                            "value": "외출",
+                            "type": "active"
+                        },
+                        {
+                            "key": "space",
+                            "value": "실내난방 모드",
+                            "type": "active"
+                        },
+                        {
+                            "key": "floor",
+                            "value": "온돌 모드",
+                            "type": "active"
+                        }
+                    ],
+                    "supportedValues": "supportedMode.value",
+                    "value": "mode.value",
+                    "multiSelection": false
+                }
+            }
+        ],
+        "actions": [
+            {
+                "label": "모드 설정",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "outside",
+                            "value": "외출",
+                            "type": "active"
+                        },
+                        {
+                            "key": "space",
+                            "value": "실내난방 모드",
+                            "type": "active"
+                        },
+                        {
+                            "key": "floor",
+                            "value": "온돌 모드",
+                            "type": "active"
+                        }
+                    ],
+                    "supportedValues": "supportedMode.value",
+                    "command": "setMode"
+                }
+            }
+        ]
+    },
+    "id": "aloneabate57300.mode",
+    "version": 1
+}

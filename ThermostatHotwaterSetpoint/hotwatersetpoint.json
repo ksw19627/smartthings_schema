@@ -1,0 +1,65 @@
+{
+	"id": "HotwaterSetpoint",
+	"version": 1,
+	"name": "Boiler Hotwater Setpoint",
+	"status": "live",
+	"attributes": {
+		"hotwaterSetpoint": {
+			"schema": {
+				"title": "Temperature",
+				"type": "object",
+				"properties": {
+					"value": {
+						"title": "TemperatureValue",
+						"type": "number",
+						"minimum": -10,
+						"maximum": 255
+					},
+					"unit": {
+						"type": "string",
+						"enum": [
+							"F",
+							"C"
+						]
+					},
+					"constraints": {
+						"title": "NumberConstraint",
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"min": {
+								"type": "number"
+							},
+							"max": {
+								"type": "number"
+							}
+						}
+					}
+				},
+				"additionalProperties": false,
+				"required": [
+					"value",
+					"unit"
+				]
+			},
+			"setter": "setHotwaterSetpoint"
+		}
+	},
+	"commands": {
+		"setHotwaterSetpoint": {
+			"name": "setHotwaterSetpoint",
+			"arguments": [
+				{
+					"name": "setpoint",
+					"schema": {
+						"title": "TemperatureValue",
+						"type": "number",
+						"minimum": -10,
+						"maximum": 255
+					},
+					"required": true
+				}
+			]
+		}
+	}
+}

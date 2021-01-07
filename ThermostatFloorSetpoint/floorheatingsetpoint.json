@@ -1,0 +1,65 @@
+{
+	"id": "thermostatFloorHeatingSetpoint",
+	"version": 1,
+	"name": "Thermostat Floor Heating Setpoint",
+	"status": "live",
+	"attributes": {
+		"floorheatingSetpoint": {
+			"schema": {
+				"title": "Temperature",
+				"type": "object",
+				"properties": {
+					"value": {
+						"title": "TemperatureValue",
+						"type": "number",
+						"minimum": -10,
+						"maximum": 255
+					},
+					"unit": {
+						"type": "string",
+						"enum": [
+							"F",
+							"C"
+						]
+					},
+					"constraints": {
+						"title": "NumberConstraint",
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"min": {
+								"type": "number"
+							},
+							"max": {
+								"type": "number"
+							}
+						}
+					}
+				},
+				"additionalProperties": false,
+				"required": [
+					"value",
+					"unit"
+				]
+			},
+			"setter": "setFloorHeatingSetpoint"
+		}
+	},
+	"commands": {
+		"setFloorHeatingSetpoint": {
+			"name": "setFloorHeatingSetpoint",
+			"arguments": [
+				{
+					"name": "setpoint",
+					"schema": {
+						"title": "TemperatureValue",
+						"type": "number",
+						"minimum": -10,
+						"maximum": 255
+					},
+					"required": true
+				}
+			]
+		}
+	}
+}

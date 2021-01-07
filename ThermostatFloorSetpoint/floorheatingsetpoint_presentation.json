@@ -1,0 +1,132 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "{{floorheatingSetpoint.value}} {{floorheatingSetpoint.unit}}",
+                "alternatives": [
+                    {
+                        "key": "C",
+                        "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "F",
+                        "value": "°F",
+                        "type": "active"
+                    },
+                    {
+                        "key": "111",
+                        "value": "--",
+                        "type": "active"
+                    }
+                ]
+            }
+        ],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "온돌 설정 온도",
+            "displayType": "stepper",
+            "stepper": {
+                "command": {
+                    "name": "setFloorHeatingSetpoint",
+                    "argumentType": "number"
+                },
+                "value": "floorheatingSetpoint.value",
+                "valueType": "number",
+                "step": 1,
+                "range": [
+                    0,
+                    70
+                ],
+                "alternatives": [
+                    {
+                        "key": "C",
+                        "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "F",
+                        "value": "°F",
+                        "type": "active"
+                    },
+                    {
+                        "key": "111",
+                        "value": "--",
+                        "type": "active"
+                    }
+                ]
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "온돌 설정 온도",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "floorheatingSetpoint.value",
+                    "valueType": "number",
+                    "unit": "floorheatingSetpoint.unit",
+                    "range": [
+                        0,
+                        70
+                    ],
+                    "alternatives": [
+                        {
+                            "key": "C",
+                            "value": "°C",
+                            "type": "active"
+                        },
+                        {
+                            "key": "F",
+                            "value": "°F",
+                            "type": "active"
+                        },
+                        {
+                            "key": "111",
+                            "value": "--",
+                            "type": "active"
+                        }
+                    ]
+                }
+            }
+        ],
+        "actions": [
+            {
+                "label": "{{floorheatingSetpoint.value}} {{floorheatingSetpoint.unit}}",
+                "displayType": "numberField",
+                "numberField": {
+                    "command": "setFloorHeatingSetpoint",
+                    "argumentType": "number",
+                    "unit": "floorheatingSetpoint.unit",
+                    "range": [
+                        0,
+                        70
+                    ],
+                    "alternatives": [
+                        {
+                            "key": "C",
+                            "value": "°C",
+                            "type": "active"
+                        },
+                        {
+                            "key": "F",
+                            "value": "°F",
+                            "type": "active"
+                        },
+                        {
+                            "key": "111",
+                            "value": "--",
+                            "type": "active"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "id": "aloneabate57300.thermostatFloorHeatingSetpoint",
+    "version": 1
+}

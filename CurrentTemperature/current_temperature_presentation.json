@@ -1,0 +1,94 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "현재 실내 온도 {{currentTemperature.value}} {{currentTemperature.unit}}",
+                "alternatives": [
+                    {
+                        "key": "C",
+                        "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "F",
+                        "value": "°F",
+                        "type": "active"
+                    },
+                    {
+                        "key": "111",
+                        "value": "--",
+                        "type": "active"
+                    }
+                ]
+            }
+        ],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "현재 실내 온도",
+            "displayType": "state",
+            "state":{
+                "label": "{{currentTemperature.value}}",
+                "unit": "currentTemperature.unit",
+                "alternatives": [
+                    {
+                        "key": "C",
+                        "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "F",
+                        "value": "°F",
+                        "type": "active"
+                    },
+                    {
+                        "key": "111",
+                        "value": "--",
+                        "type": "active"
+                    }
+                ]
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "현재 실내 온도",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "currentTemperature.value",
+                    "valueType": "number",
+                    "unit": "currentTemperature.unit",
+                    "alternatives": [
+                        {
+                            "key": "C",
+                            "value": "°C",
+                            "type": "active"
+                        },
+                        {
+                            "key": "F",
+                            "value": "°F",
+                            "type": "active"
+                        },
+                        {
+                            "key": "111",
+                            "value": "--",
+                            "type": "active"
+                        }
+                    ],
+                    "range": [
+                        -10,
+                        111
+                    ]
+                }
+            }
+        ],
+        "actions": [
+
+            ]
+    },
+    "id": "aloneabate57300.currenttemperature",
+    "version": 1
+}

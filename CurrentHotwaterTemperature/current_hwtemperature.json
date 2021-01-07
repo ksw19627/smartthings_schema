@@ -1,0 +1,80 @@
+{
+	"id": "currentHotwaterTemperature",
+	"version": 1,
+	"name": "Current Hotwater Temperature",
+	"status": "live",
+	"attributes": {
+		"currentHotwaterTemperature": {
+			"schema": {
+				"title": "Current Hotwater Temperature",
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"value": {
+						"title": "currentHotwaterTemperature",
+						"type": "number",
+						"minimum": -10,
+						"maximum": 111
+					},
+					"unit": {
+						"title": "TemperatureUnit",
+						"type": "string",
+						"enum": [
+							"F",
+							"C"
+						]
+					},
+					"constraints": {
+						"title": "NumberConstraint",
+						"type": "object",
+						"additionalProperties": false,
+						"properties": {
+							"min": {
+								"type": "number"
+							},
+							"max": {
+								"type": "number"
+							}
+						}
+					}
+				},
+				"required": [
+					"value",
+					"unit"
+				]
+			},
+			"setter": "setCurrentHotwaterSetpoint"
+		}
+	},
+	"commands": {
+		"setCurrentHotwaterSetpoint": {
+			"name": "setCurrentHotwaterSetpoint",
+			"arguments": [
+				{
+					"name": "setpoint",
+					"schema": {
+						"type": "number",
+						"minimum": -10,
+						"maximum": 111
+					},
+					"required": true
+				}
+			]
+		},
+		"setUnit": {
+			"arguments": [
+				{
+					"name": "unit",
+					"schema": {
+						"type": "string",
+						"enum": [
+							"F",
+							"C"
+						]
+					},
+					"required": true
+				}
+			]
+		}
+	}
+}

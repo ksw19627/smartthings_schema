@@ -1,0 +1,92 @@
+{
+	"id": "Mode",
+	"version": 1,
+	"name": "Mode",
+	"status": "live",
+	"attributes": {
+		"mode": {
+			"schema": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"value": {
+						"title": "ThermostatMode",
+						"type": "string",
+						"enum": [
+							"outside",
+							"space",
+							"floor",
+							"OFF"
+						]
+					}
+				},
+				"required": [
+					"value"
+				]
+			},
+			"setter": "setMode"
+		},
+		"supportedMode": {
+			"schema": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"value": {
+						"type": "array",
+						"items": {
+							"title": "mode",
+							"type": "string",
+							"enum": [
+								"outside",
+								"space",
+								"floor",
+								"OFF"
+							]
+						}
+					}
+				}
+			}
+		}
+	},
+	"commands": {
+		"outside": {
+			"arguments": [
+
+			]
+		},
+		"space": {
+			"arguments": [
+
+			]
+		},
+		"floor": {
+			"arguments": [
+
+			]
+		},
+		"OFF": {
+			"arguments": [
+
+			]
+		},
+		"setMode": {
+			"name" : "setMode",
+			"arguments": [
+				{
+					"name": "mode",
+					"schema": {
+						"title": "mode",
+						"type": "string",
+						"enum": [
+							"outside",
+							"space",
+							"floor",
+							"OFF"
+						]
+					},
+					"required": true
+				}
+			]
+		}
+	}
+}

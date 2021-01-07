@@ -1,0 +1,94 @@
+{
+    "dashboard": {
+        "states": [
+            {
+                "label": "현재 온수 온도 {{currentHotwaterTemperature.value}} {{currentHotwaterTemperature.unit}}",
+                "alternatives": [
+                    {
+                        "key": "C",
+                        "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "F",
+                        "value": "°F",
+                        "type": "active"
+                    },
+                    {
+                        "key": "111",
+                        "value": "--",
+                        "type": "active"
+                    }
+                ]
+            }
+        ],
+        "actions": [],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "label": "현재 온수 온도",
+            "displayType": "state",
+            "state":{
+                "label": "{{currentHotwaterTemperature.value}}",
+                "unit": "currentHotwaterTemperature.unit",
+                "alternatives": [
+                    {
+                        "key": "C",
+                        "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "F",
+                        "value": "°F",
+                        "type": "active"
+                    },
+                    {
+                        "key": "111",
+                        "value": "--",
+                        "type": "active"
+                    }
+                ]
+            }
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "label": "현재 온수 온도",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "currentHotwaterTemperature.value",
+                    "valueType": "number",
+                    "unit": "currentHotwaterTemperature.unit",
+                    "alternatives": [
+                        {
+                            "key": "C",
+                            "value": "°C",
+                            "type": "active"
+                        },
+                        {
+                            "key": "F",
+                            "value": "°F",
+                            "type": "active"
+                        },
+                        {
+                            "key": "111",
+                            "value": "--",
+                            "type": "active"
+                        }
+                    ],
+                    "range": [
+                        -10,
+                        111
+                    ]
+                }
+            }
+        ],
+        "actions": [
+
+            ]
+    },
+    "id": "aloneabate57300.currentHotwaterTemperature",
+    "version": 1
+}

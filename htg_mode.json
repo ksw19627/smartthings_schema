@@ -1,0 +1,104 @@
+{
+	"id": "ThermostatMode",
+	"version": 1,
+	"name": "Thermostat Mode",
+	"status": "live",
+	"attributes": {
+		"thermostatMode": {
+			"schema": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"value": {
+						"title": "ThermostatMode",
+						"type": "string",
+						"enum": [
+							"auto",
+							"cool",
+							"eco",
+							"rush hour",
+							"emergency heat",
+							"heat",
+							"off"
+						]
+					}
+				},
+				"required": [
+					"value"
+				]
+			}
+		},
+		"supportedThermostatModes": {
+			"schema": {
+				"type": "object",
+				"additionalProperties": false,
+				"properties": {
+					"value": {
+						"type": "array",
+						"items": {
+							"title": "ThermostatMode",
+							"type": "string",
+							"enum": [
+								"auto",
+								"cool",
+								"eco",
+								"rush hour",
+								"emergency heat",
+								"heat",
+								"off"
+																																																																																																																																								    ]
+						}
+					}
+				}
+			}
+		}
+	},
+	"commands": {
+		"auto": {
+			"arguments": [
+
+			]
+		},
+		"cool": {
+			"arguments": [
+
+			]
+		},
+		"emergencyHeat": {
+			"arguments": [
+
+			]
+		},
+		"heat": {
+			"arguments": [
+
+			]
+		},
+		"off": {
+			"arguments": [
+
+			]
+		},
+		"setThermostatMode": {
+			"arguments": [
+				{
+					"name": "mode",
+					"schema": {
+						"title": "ThermostatMode",
+						"type": "string",
+						"enum": [
+							"auto",
+							"cool",
+							"eco",
+							"rush hour",
+							"emergency heat",
+							"heat",
+							"off"
+						]
+					},
+					"required": true
+				}
+			]
+		}
+	}
+}
