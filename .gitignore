@@ -1,4 +1,5 @@
 ## Ignored Files in Device Profiles.. ##
 
-*.idea/
+.idea/
+.idea/*
 
