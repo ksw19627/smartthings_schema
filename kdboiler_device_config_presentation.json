@@ -1,0 +1,3106 @@
+{
+    "manufacturerName": "0Azh",
+    "presentationId": "ST_3bfe2bad-9858-48af-a5a4-605fde39b8f3",
+    "mnmn": "0Azh",
+    "vid": "ST_3bfe2bad-9858-48af-a5a4-605fde39b8f3",
+    "dashboard": {
+        "states": [],
+        "actions": [
+            {
+                "displayType": "standbyPowerSwitch",
+                "standbyPowerSwitch": {
+                    "command": {
+                        "on": "on",
+                        "off": "off"
+                    },
+                    "state": {
+                        "value": "switch.value",
+                        "on": "on",
+                        "off": "off"
+                    }
+                },
+                "capability": "switch",
+                "version": 1,
+                "component": "main"
+            }
+        ],
+        "basicPlus": []
+    },
+    "detailView": [
+        {
+            "capability": "switch",
+            "version": 1,
+            "label": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT",
+            "displayType": "standbyPowerSwitch",
+            "standbyPowerSwitch": {
+                "command": {
+                    "on": "on",
+                    "off": "off"
+                },
+                "state": {
+                    "value": "switch.value",
+                    "on": "on",
+                    "off": "off",
+                    "label": "{{switch.value}}",
+                    "alternatives": [
+                        {
+                            "key": "on",
+                            "value": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON",
+                            "type": "active"
+                        },
+                        {
+                            "key": "off",
+                            "value": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF",
+                            "type": "inactive"
+                        }
+                    ]
+                }
+            },
+            "state": null,
+            "component": "main"
+        },
+        {
+            "capability": "aloneabate57300.currenttemperature",
+            "version": 1,
+            "label": "현재 실내 온도",
+            "displayType": "state",
+            "state": {
+                "label": "{{currentTemperature.value}}",
+                "unit": "currentTemperature.unit",
+                "alternatives": [
+                    {
+                        "key": "C",
+                        "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "F",
+                        "value": "°F",
+                        "type": "active"
+                    },
+                    {
+                        "key": "111",
+                        "value": "--",
+                        "type": "active"
+                    }
+                ]
+            },
+            "component": "main"
+        },
+        {
+            "capability": "aloneabate57300.mode",
+            "version": 1,
+            "label": "모드 설정",
+            "displayType": "list",
+            "list": {
+                "command": {
+                    "name": "setMode",
+                    "alternatives": [
+                        {
+                            "key": "outside",
+                            "value": "외출",
+                            "type": "active"
+                        },
+                        {
+                            "key": "space",
+                            "value": "실내난방 모드",
+                            "type": "active"
+                        },
+                        {
+                            "key": "floor",
+                            "value": "온돌 모드",
+                            "type": "active"
+                        }
+                    ],
+                    "supportedValues": "supportedMode.value"
+                },
+                "state": {
+                    "value": "mode.value",
+                    "alternatives": [
+                        {
+                            "key": "outside",
+                            "value": "외출",
+                            "type": "active"
+                        },
+                        {
+                            "key": "space",
+                            "value": "실내난방 모드",
+                            "type": "active"
+                        },
+                        {
+                            "key": "floor",
+                            "value": "온돌 모드",
+                            "type": "active"
+                        }
+                    ]
+                }
+            },
+            "state": null,
+            "component": "RoomTemperatureSetting"
+        },
+        {
+            "capability": "aloneabate57300.thermostatSpaceHeatingSetpoint",
+            "version": 1,
+            "label": "실내 난방 온도",
+            "displayType": "stepper",
+            "stepper": {
+                "command": {
+                    "name": "setSpaceHeatingSetpoint",
+                    "argumentType": "number"
+                },
+                "value": "spaceheatingSetpoint.value",
+                "valueType": "number",
+                "step": 1,
+                "range": [
+                    0,
+                    70
+                ]
+            },
+            "state": null,
+            "component": "RoomTemperatureSetting"
+        },
+        {
+            "capability": "aloneabate57300.thermostatFloorHeatingSetpoint",
+            "version": 1,
+            "label": "온돌 설정 온도",
+            "displayType": "stepper",
+            "stepper": {
+                "command": {
+                    "name": "setFloorHeatingSetpoint",
+                    "argumentType": "number"
+                },
+                "value": "floorheatingSetpoint.value",
+                "valueType": "number",
+                "step": 1,
+                "range": [
+                    0,
+                    70
+                ]
+            },
+            "state": null,
+            "component": "RoomTemperatureSetting"
+        },
+        {
+            "capability": "aloneabate57300.currenthotwatertemperature",
+            "version": 1,
+            "label": "현재 온수 온도",
+            "displayType": "state",
+            "state": {
+                "label": "{{currentHotwaterTemperature.value}}",
+                "unit": "currentHotwaterTemperature.unit",
+                "alternatives": [
+                    {
+                        "key": "C",
+                        "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "F",
+                        "value": "°F",
+                        "type": "active"
+                    },
+                    {
+                        "key": "111",
+                        "value": "--",
+                        "type": "active"
+                    }
+                ]
+            },
+            "component": "HotwaterTemperatureSetting"
+        },
+        {
+            "capability": "aloneabate57300.thermostatHotwaterSetpoint",
+            "version": 1,
+            "label": "온수 설정 온도",
+            "displayType": "stepper",
+            "stepper": {
+                "command": {
+                    "name": "setHotwaterSetpoint",
+                    "argumentType": "number"
+                },
+                "value": "hotwaterSetpoint.value",
+                "valueType": "number",
+                "step": 1,
+                "range": [
+                    0,
+                    70
+                ]
+            },
+            "state": null,
+            "component": "HotwaterTemperatureSetting"
+        }
+    ],
+    "automation": {
+        "conditions": [
+            {
+                "capability": "switch",
+                "version": 1,
+                "label": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "on",
+                            "value": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON",
+                            "type": "active"
+                        },
+                        {
+                            "key": "off",
+                            "value": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF",
+                            "type": "inactive"
+                        }
+                    ],
+                    "value": "switch.value"
+                },
+                "emphasis": true,
+                "exclusion": [],
+                "component": "main"
+            },
+            {
+                "capability": "aloneabate57300.currenttemperature",
+                "version": 1,
+                "label": "현재 실내 온도",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "currentTemperature.value",
+                    "valueType": "number",
+                    "unit": "currentTemperature.unit",
+                    "range": [
+                        -10,
+                        111
+                    ]
+                },
+                "exclusion": [],
+                "component": "main"
+            },
+            {
+                "capability": "aloneabate57300.mode",
+                "version": 1,
+                "label": "모드 설정",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "outside",
+                            "value": "외출",
+                            "type": "active"
+                        },
+                        {
+                            "key": "space",
+                            "value": "실내난방 모드",
+                            "type": "active"
+                        },
+                        {
+                            "key": "floor",
+                            "value": "온돌 모드",
+                            "type": "active"
+                        }
+                    ],
+                    "supportedValues": "supportedMode.value",
+                    "value": "mode.value"
+                },
+                "exclusion": [],
+                "component": "RoomTemperatureSetting"
+            },
+            {
+                "capability": "aloneabate57300.thermostatSpaceHeatingSetpoint",
+                "version": 1,
+                "label": "실내 난방 온도",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "spaceheatingSetpoint.value",
+                    "valueType": "number",
+                    "unit": "spaceheatingSetpoint.unit",
+                    "range": [
+                        0,
+                        70
+                    ]
+                },
+                "exclusion": [],
+                "component": "RoomTemperatureSetting"
+            },
+            {
+                "capability": "aloneabate57300.thermostatFloorHeatingSetpoint",
+                "version": 1,
+                "label": "온돌 설정 온도",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "floorheatingSetpoint.value",
+                    "valueType": "number",
+                    "unit": "floorheatingSetpoint.unit",
+                    "range": [
+                        0,
+                        70
+                    ]
+                },
+                "exclusion": [],
+                "component": "RoomTemperatureSetting"
+            },
+            {
+                "capability": "aloneabate57300.currenthotwatertemperature",
+                "version": 1,
+                "label": "현재 온수 온도",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "currentHotwaterTemperature.value",
+                    "valueType": "number",
+                    "unit": "currentHotwaterTemperature.unit",
+                    "range": [
+                        -10,
+                        111
+                    ]
+                },
+                "exclusion": [],
+                "component": "HotwaterTemperatureSetting"
+            },
+            {
+                "capability": "aloneabate57300.thermostatHotwaterSetpoint",
+                "version": 1,
+                "label": "온수 설정 온도",
+                "displayType": "numberField",
+                "numberField": {
+                    "value": "hotwaterSetpoint.value",
+                    "valueType": "number",
+                    "unit": "hotwaterSetpoint.unit",
+                    "range": [
+                        0,
+                        70
+                    ]
+                },
+                "exclusion": [],
+                "component": "HotwaterTemperatureSetting"
+            }
+        ],
+        "actions": [
+            {
+                "capability": "switch",
+                "version": 1,
+                "label": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "on",
+                            "value": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON",
+                            "type": "active"
+                        },
+                        {
+                            "key": "off",
+                            "value": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF",
+                            "type": "inactive"
+                        }
+                    ]
+                },
+                "emphasis": true,
+                "component": "main",
+                "exclusion": []
+            },
+            {
+                "capability": "aloneabate57300.mode",
+                "version": 1,
+                "label": "모드 설정",
+                "displayType": "list",
+                "list": {
+                    "alternatives": [
+                        {
+                            "key": "outside",
+                            "value": "외출",
+                            "type": "active"
+                        },
+                        {
+                            "key": "space",
+                            "value": "실내난방 모드",
+                            "type": "active"
+                        },
+                        {
+                            "key": "floor",
+                            "value": "온돌 모드",
+                            "type": "active"
+                        }
+                    ],
+                    "supportedValues": "supportedMode.value",
+                    "command": "setMode"
+                },
+                "component": "RoomTemperatureSetting",
+                "exclusion": []
+            },
+            {
+                "capability": "aloneabate57300.thermostatSpaceHeatingSetpoint",
+                "version": 1,
+                "label": "{{spaceheatingSetpoint.value}} {{spaceheatingSetpoint.unit}}",
+                "displayType": "numberField",
+                "numberField": {
+                    "command": "setSpaceHeatingSetpoint",
+                    "argumentType": "number",
+                    "unit": "spaceheatingSetpoint.unit",
+                    "range": [
+                        0,
+                        70
+                    ]
+                },
+                "component": "RoomTemperatureSetting",
+                "exclusion": []
+            },
+            {
+                "capability": "aloneabate57300.thermostatFloorHeatingSetpoint",
+                "version": 1,
+                "label": "{{floorheatingSetpoint.value}} {{floorheatingSetpoint.unit}}",
+                "displayType": "numberField",
+                "numberField": {
+                    "command": "setFloorHeatingSetpoint",
+                    "argumentType": "number",
+                    "unit": "floorheatingSetpoint.unit",
+                    "range": [
+                        0,
+                        70
+                    ]
+                },
+                "component": "RoomTemperatureSetting",
+                "exclusion": []
+            },
+            {
+                "capability": "aloneabate57300.thermostatHotwaterSetpoint",
+                "version": 1,
+                "label": "{{hotwaterSetpoint.value}} {{hotwaterSetpoint.unit}}",
+                "displayType": "numberField",
+                "numberField": {
+                    "command": "setHotwaterSetpoint",
+                    "argumentType": "number",
+                    "unit": "hotwaterSetpoint.unit",
+                    "range": [
+                        0,
+                        70
+                    ]
+                },
+                "component": "HotwaterTemperatureSetting",
+                "exclusion": []
+            }
+        ]
+    },
+    "dpInfo": [
+        {
+            "os": "ios",
+            "dpUri": "plugin://com.samsung.ios.plugin.stplugin/assets/files/index.html"
+        },
+        {
+            "os": "android",
+            "dpUri": "plugin://com.samsung.android.plugin.stplugin"
+        },
+        {
+            "os": "web",
+            "dpUri": "wwst://com.samsung.one.plugin.stplugin"
+        }
+    ],
+    "language": [
+        {
+            "locale": "de",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Ausschalten",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Ein",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Ein-/Aus",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Einschalten",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Aus",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "hi",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "चालू",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "चालू करें",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "पॉवर",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "बंद करें",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "बंद",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "lt",
+            "poCodes": [
+                {
+                    "label": "Įjungti",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Išjungti",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Įjungta",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Maitinimas",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Išjungta",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "lv",
+            "poCodes": [
+                {
+                    "label": "Ieslēgt",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Izslēgt",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Ieslēgts",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Ieslēgt/izslēgt",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Izslēgts",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "hr",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Uključeno",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Uključi",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Isključi",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Uključi/isključi",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Isključeno",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "es_US",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Encendido/apagado",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Activar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Activado",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Desactivar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Desactivado",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "pt_BR",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Desativar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Ativado",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Ativar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Desativado",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Ligar/Desligar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                }
+            ]
+        },
+        {
+            "locale": "en_PH",
+            "poCodes": [
+                {
+                    "label": "Power",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Turn on",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "On",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Turn off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "hu",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Bekapcsolva",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Bekapcsolás",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Kikapcsol",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Be- és kikapcsolás",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Kikapcsolva",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "si_LK",
+            "poCodes": [
+                {
+                    "label": "ක්‍රි. වි.",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ක්‍රියා විරහිතයි",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "ක්‍රියාත්මකයි",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "බලය",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ක්‍රියාත්මක කරන්න",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "bn_BD",
+            "poCodes": [
+                {
+                    "label": "চালু",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "বন্ধ করুন",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "বন্ধ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "পাওয়ার",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "চালু করুন",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "lo_LA",
+            "poCodes": [
+                {
+                    "label": "​ເປີດ​ປິດເຄື່ອງ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ເປີດ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "ເປີດ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "ປິດ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "ປິດ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "gl_ES",
+            "poCodes": [
+                {
+                    "label": "Desactivado",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Desactivar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Alimentación",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Activar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Activado",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "kn_IN",
+            "poCodes": [
+                {
+                    "label": "ಪವರ್",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ಆನ್ ಮಾಡಿ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "ಆನ್",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "ಆಫ್",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "ಆಫ್ ಮಾಡಿ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "uk",
+            "poCodes": [
+                {
+                    "label": "Вимкнено",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Вимкнути",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Увімкнено",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Увімкнути",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Живлення",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                }
+            ]
+        },
+        {
+            "locale": "ug_CN",
+            "poCodes": [
+                {
+                    "label": "ئوچۇق",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "توك مەنبەسى",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ئېچىش",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "ئېتىش",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "ئېتىك",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "my_ZG",
+            "poCodes": [
+                {
+                    "label": "ပိတ္",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ပါဝါ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ဖြင့္ပါ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "ပိတ္ရန္",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "ဖြင့္",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                }
+            ]
+        },
+        {
+            "locale": "es_ES",
+            "poCodes": [
+                {
+                    "label": "Activar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Encendido",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Activado",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Desactivar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Desactivado",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "is_IS",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Kveikt",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Slökkt",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Slökkva",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Kveikja",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Afl",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                }
+            ]
+        },
+        {
+            "locale": "te_IN",
+            "poCodes": [
+                {
+                    "label": "పవర్",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ఆన్",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "ఆన్ చేయి",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "ఆఫ్ చేయి",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "ఆఫ్",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "sq_AL",
+            "poCodes": [
+                {
+                    "label": "Ndiz",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Ndezur",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Ndize",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Fik",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Fikur",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "in",
+            "poCodes": [
+                {
+                    "label": "Aktifkan",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Nonaktifkn",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Aktif",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Daya",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Nonaktif",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "el",
+            "poCodes": [
+                {
+                    "label": "Απενεργ.",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Ενεργοποίηση",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Ενεργό",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Τροφοδοσία",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Ανενεργό",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "ta_IN",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ஆஃப் செய்க",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "ஆஃப்",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "ஆன்",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "ஆன் செய்க",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "பவர்",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                }
+            ]
+        },
+        {
+            "locale": "en",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Turn off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Turn on",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "On",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Power",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "it",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Attiva",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Disattiva",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Acceso",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Accensione",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Spento",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "my_MM",
+            "poCodes": [
+                {
+                    "label": "ပါဝါ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ပိတ်ရန်",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "ဖွင့်",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "ပိတ်",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ဖွင့်ပါ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "iw",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "הפעל",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "כבה",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "מופעל",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "הפעלה",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "כבוי",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "ar",
+            "poCodes": [
+                {
+                    "label": "إيقاف تشغيل",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "التشغيل",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "التشغيل",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "تشغيل",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "إيقاف التشغيل",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "as",
+            "poCodes": [
+                {
+                    "label": "অফ কৰক",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "অন",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "পাৱাৰ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "অন কৰক",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "অফ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "vi",
+            "poCodes": [
+                {
+                    "label": "Tắt",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Tắt",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Bật",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Bật",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Nguồn",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                }
+            ]
+        },
+        {
+            "locale": "nb",
+            "poCodes": [
+                {
+                    "label": "Slå på",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Slå av",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "På",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Strøm",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Av",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "ko_KR",
+            "poCodes": [
+                {
+                    "label": "켜기",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "켜짐",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "전원",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "꺼짐",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "끄기",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "en_US",
+            "poCodes": [
+                {
+                    "label": "Turn on",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Power",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "On",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Turn off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "ne",
+            "poCodes": [
+                {
+                    "label": "अन गर्नुहोस्",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "अफ गर्नु",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "अन",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "पावर",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "अफ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "ja",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ON",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "OFF",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "ON",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "電源",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "OFF",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "fa",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "خاموش کردن",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "روشن",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "روشن",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "دکمه روشن/خاموش",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "خاموش",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "kk_KZ",
+            "poCodes": [
+                {
+                    "label": "Қосулы",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Өшірулі",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Өшіру",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Қуат",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Қосу",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "ro",
+            "poCodes": [
+                {
+                    "label": "Oprit",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Oprire",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Pornit",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Pornire",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Pornire",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "nl",
+            "poCodes": [
+                {
+                    "label": "Inschakelen",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Uitschak.",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Aan",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Spaarstand",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Uit",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "en_ZG",
+            "poCodes": [
+                {
+                    "label": "Off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Turn on",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Turn off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Power",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "On",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "fi",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Poista k.",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Käytössä",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Ota käyttöön",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Virta",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Ei käytössä",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "ru",
+            "poCodes": [
+                {
+                    "label": "Выкл",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Выключить",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Вкл",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Питание",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Включить",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "bg",
+            "poCodes": [
+                {
+                    "label": "Изключв.",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Включено",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Захранване",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Включване",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Изключено",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "be_BY",
+            "poCodes": [
+                {
+                    "label": "Уключыць",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Выключыць",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Выкл.",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Укл.",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Сілкаванне",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "mr_IN",
+            "poCodes": [
+                {
+                    "label": "चालू करा",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "चालू",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "बंद",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "पॉवर",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "बंद करा",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "mn_MN",
+            "poCodes": [
+                {
+                    "label": "Тэжээл",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Унтраах",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Асаах",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Унтраах",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Асаа",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "km_KH",
+            "poCodes": [
+                {
+                    "label": "ថាមពល",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "បើក",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "បិទ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "បើក",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "បិទ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "fr",
+            "poCodes": [
+                {
+                    "label": "Désactiver",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Activé",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Activer",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Marche",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Désactivé",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "bo",
+            "poCodes": [
+                {
+                    "label": "ཁ་རྒྱག",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "ཁ་ཕྱེ།",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "གློག་ཁུངས།",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "སྒུལ་སློང་།",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "ཁ་རྒྱག",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "ms_MY",
+            "poCodes": [
+                {
+                    "label": "Mati",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Hidupkan",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Kuasa",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Matikan",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Hidup",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                }
+            ]
+        },
+        {
+            "locale": "bs",
+            "poCodes": [
+                {
+                    "label": "Isključi",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Uključeno",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Energija",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Uključi",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Isključeno",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "ky_KG",
+            "poCodes": [
+                {
+                    "label": "Күйгүзүү",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Кубат",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Өчүк",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Күйүк",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Өчүрүү",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "zh_HK",
+            "poCodes": [
+                {
+                    "label": "關閉",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "關閉",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "開啟",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "開啟",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "電源",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                }
+            ]
+        },
+        {
+            "locale": "zh_TW",
+            "poCodes": [
+                {
+                    "label": "開",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "電源",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "關閉",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "開啟",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "關",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "uz_UZ",
+            "poCodes": [
+                {
+                    "label": "Yoqish",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Quvvat",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "O‘chirish",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "O‘ch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Yoq",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                }
+            ]
+        },
+        {
+            "locale": "si",
+            "poCodes": [
+                {
+                    "label": "ක්‍රියා විරහිතයි",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ක්‍රි. වි.",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "ක්‍රියාත්මකයි",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "බලය",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ක්‍රියාත්මක කරන්න",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "eu_ES",
+            "poCodes": [
+                {
+                    "label": "Desaktibatuta",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Desaktib.",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Aktibatu",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Piztu/Itzali",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Aktibatuta",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                }
+            ]
+        },
+        {
+            "locale": "sk",
+            "poCodes": [
+                {
+                    "label": "Vypnuté",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Vypnúť",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Zapnuté",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Napájanie",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Zapnúť",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "sl",
+            "poCodes": [
+                {
+                    "label": "Izklopljeno",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Izklopi",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Vklopljeno",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Vklop",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Vklopi",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "ga",
+            "poCodes": [
+                {
+                    "label": "Cas as",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Cas air",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Air",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Cumhacht",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "As",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "pl_SP",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ZAŁ/WYŁ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Załōnczōne",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Załōncz",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Wyłōnczōne",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Wyłōncz",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "ca",
+            "poCodes": [
+                {
+                    "label": "Desactivar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Activat",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Alimentació",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Activar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Desactivat",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "sr",
+            "poCodes": [
+                {
+                    "label": "Isključen",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Isključi",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Uključen",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Napajanje",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Uključi",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "bn_IN",
+            "poCodes": [
+                {
+                    "label": "চালু",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "বন্ধ করুন",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "চালু করুন",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "বন্ধ করুন",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "পাওয়ার",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "or",
+            "poCodes": [
+                {
+                    "label": "ଟର୍ନ୍ ଅନ୍",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "ଅଫ୍",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "ଟର୍ନ୍ ଅଫ୍",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ଅନ୍",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "ପାୱାର୍",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                }
+            ]
+        },
+        {
+            "locale": "sv",
+            "poCodes": [
+                {
+                    "label": "Av",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Stäng av",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "På",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Strömbrytare",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Slå på",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "fr_CA",
+            "poCodes": [
+                {
+                    "label": "Activé",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Désactiver",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Désactivé",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Activer",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Allumer",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                }
+            ]
+        },
+        {
+            "locale": "ko",
+            "poCodes": [
+                {
+                    "label": "켜기",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "끄기",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "켜짐",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "전원",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "꺼짐",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "pa_IN",
+            "poCodes": [
+                {
+                    "label": "ਬੰਦ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "ਪਾਵਰ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ਚਾਲੂ ਕਰੋ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "ਬੰਦ ਕਰੋ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ਚਾਲੂ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                }
+            ]
+        },
+        {
+            "locale": "hy_AM",
+            "poCodes": [
+                {
+                    "label": "Միացնել",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Միացնել",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Սնուցում",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Անջատել",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Անջատել",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "mk_MK",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Исклучи",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Вклучи",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Вклучено",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Исклучено",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Вклучување",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                }
+            ]
+        },
+        {
+            "locale": "cs",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Vypnout",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Zapnuto",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Napájení",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Zapnout",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Vypnuto",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "az_AZ",
+            "poCodes": [
+                {
+                    "label": "Yandır",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Söndür",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Yan",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Sön",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Enerji",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "tg",
+            "poCodes": [
+                {
+                    "label": "Хомӯш",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Хомӯш к-н",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Фурӯзон",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Барқ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Фурӯзон кардан",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "gu_IN",
+            "poCodes": [
+                {
+                    "label": "ચાલું કરો",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "પાવર",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ચાલુ કરો",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "બંધ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "બંધ કરો",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "th",
+            "poCodes": [
+                {
+                    "label": "ปิด",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ปิด",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "เปิด",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "เปิด/ปิด",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "เปิด",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "et_EE",
+            "poCodes": [
+                {
+                    "label": "Väljas",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Lülita sisse",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Lül. välja",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Toide",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Sees",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "ka_GE",
+            "poCodes": [
+                {
+                    "label": "ჩართული",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "გამორთული",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "გამორთვა",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "ჩართვა",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "ელკვება",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                }
+            ]
+        },
+        {
+            "locale": "en_CA",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Power",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Turn on",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "On",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Turn off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "tk",
+            "poCodes": [
+                {
+                    "label": "Ýapyk",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Ýap",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Açyk",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Güýç",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Aç",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "ne_NP",
+            "poCodes": [
+                {
+                    "label": "अन",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "अन गर्नुहोस्",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "पावर",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "अफ गर्नु",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "अफ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        },
+        {
+            "locale": "ml_IN",
+            "poCodes": [
+                {
+                    "label": "ഓഫ് ചെയ്യുക",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "ഓൺ ചെയ്യുക",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "പവര്‍",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "ഓൺ",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "ഓഫ്",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "tl",
+            "poCodes": [
+                {
+                    "label": "Naka-off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "I-off",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Naka-on",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Power",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Naka-on",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "ur_PK",
+            "poCodes": [
+                {
+                    "label": "آن کریں",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "پاور",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "آن",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "آف کریں",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "آف",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "zh_CN",
+            "poCodes": [
+                {
+                    "label": "启用",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "电源",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "关闭",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "开",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "关",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "pl",
+            "poCodes": [
+                {
+                    "label": "Włącz",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Wyłączone",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Włączone",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Zasilanie",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Wyłącz",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "da",
+            "poCodes": [
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Deaktiver",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Til",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Strøm",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Aktiver",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Fra",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                }
+            ]
+        },
+        {
+            "locale": "tr",
+            "poCodes": [
+                {
+                    "label": "Kapalı",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                },
+                {
+                    "label": "Kapat",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "Açık",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Güç",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Aç",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                }
+            ]
+        },
+        {
+            "locale": "pt_PT",
+            "poCodes": [
+                {
+                    "label": "Ligar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_ON"
+                },
+                {
+                    "label": "Desligar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH_OFF"
+                },
+                {
+                    "label": "Ligar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_ON"
+                },
+                {
+                    "label": "Alimentação",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT"
+                },
+                {
+                    "label": "Desligar",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_COMMANDS_OFF"
+                },
+                {
+                    "label": "switch",
+                    "po": "___PO_CODE_CAPABILITY.SMARTTHINGS.SWITCH_DEFAULT_ATTRIBUTES_SWITCH"
+                }
+            ]
+        }
+    ]
+}
