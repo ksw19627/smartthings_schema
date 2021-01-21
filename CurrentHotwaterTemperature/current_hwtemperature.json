@@ -1,7 +1,7 @@
 {
-	"id": "currentHotwaterTemperature",
+	"id": "CurrentHotwaterTemperature",
 	"version": 1,
-	"name": "Current Hotwater Temperature",
+	"name": "currentHotwaterTemperature",
 	"status": "live",
 	"attributes": {
 		"currentHotwaterTemperature": {
@@ -21,6 +21,7 @@
 						"type": "string",
 						"enum": [
 							"F",
+							"D",
 							"C"
 						]
 					},
@@ -69,6 +70,7 @@
 						"type": "string",
 						"enum": [
 							"F",
+							"D",
 							"C"
 						]
 					},

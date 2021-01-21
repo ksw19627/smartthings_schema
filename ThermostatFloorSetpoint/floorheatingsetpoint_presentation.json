@@ -38,8 +38,8 @@
                 "valueType": "number",
                 "step": 1,
                 "range": [
-                    0,
-                    70
+                    30,
+                    85
                 ],
                 "alternatives": [
                     {
@@ -71,8 +71,8 @@
                     "valueType": "number",
                     "unit": "floorheatingSetpoint.unit",
                     "range": [
-                        0,
-                        70
+                        30,
+                        85
                     ],
                     "alternatives": [
                         {
@@ -103,8 +103,8 @@
                     "argumentType": "number",
                     "unit": "floorheatingSetpoint.unit",
                     "range": [
-                        0,
-                        70
+                        30,
+                        85
                     ],
                     "alternatives": [
                         {
@@ -127,6 +127,6 @@
             }
         ]
     },
-    "id": "aloneabate57300.thermostatFloorHeatingSetpoint",
+    "id": "voiceaddress44089.thermostatFloorHeatingSetpoint",
     "version": 1
 }

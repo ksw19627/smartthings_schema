@@ -1,0 +1,75 @@
+{
+    "id": "298d6c6d-abe8-4725-92c9-c9e8dceb19c7",
+    "name": "Navien IoT Boiler",
+    "components": [
+        {
+            "label": "main",
+            "id": "main",
+            "capabilities": [
+                {
+                    "id": "healthCheck",
+                    "version": 1
+                },
+                {
+                    "id": "refresh",
+                    "version": 1
+                },
+                {
+                    "id": "switch",
+                    "version": 1
+                },
+                {
+                    "id": "voiceaddress44089.currenttemperature",
+                    "version": 1
+                }
+            ],
+            "categories": []
+        },
+        {
+            "label": "RoomTemperatureSetting",
+            "id": "RoomTemperatureSetting",
+            "capabilities": [
+                {
+                    "id": "voiceaddress44089.mode",
+                    "version": 1
+                },
+                {
+                    "id": "voiceaddress44089.thermostatSpaceHeatingSetpoint",
+                    "version": 1
+                },
+                {
+                    "id": "voiceaddress44089.thermostatFloorHeatingSetpoint",
+                    "version": 1
+                }
+            ],
+            "categories": []
+        },
+        {
+            "label": "HotwaterTemperatureSetting",
+            "id": "HotwaterTemperatureSetting",
+            "capabilities": [
+                {
+                    "id": "voiceaddress44089.currentHotwaterTemperature",
+                    "version": 1
+                },
+                {
+                    "id": "voiceaddress44089.boilerHotwaterSetpoint",
+                    "version": 1
+                }
+            ],
+            "categories": []
+        }
+    ],
+    "metadata": {
+        "vid": "ST_a9e39f4b-af83-4112-bf29-e941f08c5912",
+        "deviceType": "Thermostat",
+        "mnmn": "0A0X",
+        "ocfDeviceType": "oic.d.thermostat",
+        "deviceTypeId": "Thermostat",
+        "ocfSpecVer": "core 1.1.0",
+        "mnid": "0A0X",
+        "mnId": "0A0X"
+    },
+    "status": "DEVELOPMENT",
+    "preferences": []
+}

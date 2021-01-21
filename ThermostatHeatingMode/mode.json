@@ -1,7 +1,7 @@
 {
-	"id": "Mode",
+	"id": "ThermostatMode",
 	"version": 1,
-	"name": "Mode",
+	"name": "Thermostat Mode",
 	"status": "live",
 	"attributes": {
 		"mode": {
@@ -13,9 +13,9 @@
 						"title": "ThermostatMode",
 						"type": "string",
 						"enum": [
-							"outside",
-							"space",
-							"floor",
+							"away",
+							"indoor",
+							"ondol",
 							"OFF"
 						]
 					}
@@ -37,9 +37,9 @@
 							"title": "mode",
 							"type": "string",
 							"enum": [
-								"outside",
-								"space",
-								"floor",
+								"away",
+								"indoor",
+								"ondol",
 								"OFF"
 							]
 						}
@@ -49,17 +49,17 @@
 		}
 	},
 	"commands": {
-		"outside": {
+		"away": {
 			"arguments": [
 
 			]
 		},
-		"space": {
+		"indoor": {
 			"arguments": [
 
 			]
 		},
-		"floor": {
+		"ondol": {
 			"arguments": [
 
 			]
@@ -78,9 +78,9 @@
 						"title": "mode",
 						"type": "string",
 						"enum": [
-							"outside",
-							"space",
-							"floor",
+							"away",
+							"indoor",
+							"ondol",
 							"OFF"
 						]
 					},

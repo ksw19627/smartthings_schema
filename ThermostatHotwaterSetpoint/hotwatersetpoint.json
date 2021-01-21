@@ -1,7 +1,7 @@
 {
-	"id": "HotwaterSetpoint",
-	"version": 1,
-	"name": "Boiler Hotwater Setpoint",
+	"id": "thermostatHotwaterSetpoint",
+	"version": 2,
+	"name": "Thermostat Hotwater Setpoint",
 	"status": "live",
 	"attributes": {
 		"hotwaterSetpoint": {
@@ -13,12 +13,14 @@
 						"title": "TemperatureValue",
 						"type": "number",
 						"minimum": -10,
-						"maximum": 255
+						"maximum": 111
 					},
 					"unit": {
+						"title": "TemperatureUnit",
 						"type": "string",
 						"enum": [
 							"F",
+							"D",
 							"C"
 						]
 					},
@@ -55,7 +57,23 @@
 						"title": "TemperatureValue",
 						"type": "number",
 						"minimum": -10,
-						"maximum": 255
+						"maximum": 111
+					},
+					"required": true
+				}
+			]
+		},
+		"setUnit": {
+			"arguments": [
+				{
+					"name": "unit",
+					"schema": {
+						"type": "string",
+						"enum": [
+							"F",
+							"D",
+							"C"
+						]
 					},
 					"required": true
 				}

@@ -9,6 +9,11 @@
                         "value": "°C",
                         "type": "active"
                     },
+		            {
+                        "key": "D",
+                        "value": "Stp.",
+                        "type": "active"
+                    },
                     {
                         "key": "F",
                         "value": "°F",
@@ -32,32 +37,63 @@
             "stepper": {
                 "command": {
                     "name": "setHotwaterSetpoint",
-                    "argumentType": "number"
+                    "argumentType": "number",
+                    "alternatives": [
+                        {
+                            "key": "C",
+                            "value": "°C",
+                            "type": "active"
+                        },
+                        {
+                            "key": "D",
+                            "value": "Stp.",
+                            "type": "active"
+                        },
+                        {
+                            "key": "F",
+                            "value": "°F",
+                            "type": "active"
+                        },
+                        {
+                            "key": "111",
+                            "value": "--",
+                            "type": "active"
+                        }
+                    ]
+                },
+                "state": {
+                    "label": "{{hotwaterSetpoint.value}}",
+                    "unit": "hotwaterSetpoint.unit",
+                    "alternatives": [
+                        {
+                            "key": "C",
+                            "value": "°C",
+                            "type": "active"
+                        },
+                        {
+                            "key": "D",
+                            "value": "Stp.",
+                            "type": "active"
+                        },
+                        {
+                            "key": "F",
+                            "value": "°F",
+                            "type": "active"
+                        },
+                        {
+                            "key": "111",
+                            "value": "--",
+                            "type": "active"
+                        }
+                    ]
                 },
                 "value": "hotwaterSetpoint.value",
                 "valueType": "number",
                 "unit:": "hotwaterSetpoint.unit",
                 "step": 1,
                 "range": [
-                    0,
-                    70
-                ],
-                "alternatives": [
-                    {
-                        "key": "C",
-                        "value": "°C",
-                        "type": "active"
-                    },
-                    {
-                        "key": "F",
-                        "value": "°F",
-                        "type": "active"
-                    },
-                    {
-                        "key": "111",
-                        "value": "--",
-                        "type": "active"
-                    }
+                    30,
+                    85
                 ]
             }
         }
@@ -71,14 +107,15 @@
                     "value": "hotwaterSetpoint.value",
                     "valueType": "number",
                     "unit": "hotwaterSetpoint.unit",
-                    "range": [
-                        0,
-                        70
-                    ],
                     "alternatives": [
                         {
                             "key": "C",
                             "value": "°C",
+                            "type": "active"
+                        },
+                        {
+                            "key": "D",
+                            "value": "Stp.",
                             "type": "active"
                         },
                         {
@@ -91,6 +128,10 @@
                             "value": "--",
                             "type": "active"
                         }
+                    ],
+                    "range": [
+                        30,
+                        85
                     ]
                 }
             }
@@ -103,14 +144,15 @@
                     "command": "setHotwaterSetpoint",
                     "argumentType": "number",
                     "unit": "hotwaterSetpoint.unit",
-                    "range": [
-                        0,
-                        70
-                    ],
                     "alternatives": [
                         {
                             "key": "C",
                             "value": "°C",
+                            "type": "active"
+                        },
+                        {
+                            "key": "D",
+                            "value": "Stp.",
                             "type": "active"
                         },
                         {
@@ -123,11 +165,15 @@
                             "value": "--",
                             "type": "active"
                         }
+                    ],
+                    "range": [
+                        30,
+                        85
                     ]
                 }
             }
         ]
     },
-    "id": "aloneabate57300.boilerHotwaterSetpoint",
+    "id": "voiceaddress44089.thermostatHotwaterSetpoint",
     "version": 1
 }

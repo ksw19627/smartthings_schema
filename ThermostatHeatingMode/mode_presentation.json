@@ -8,17 +8,17 @@
                     "name": "setMode",
                     "alternatives": [
                         {
-                            "key": "outside",
+                            "key": "away",
                             "value": "외출",
                             "type": "active"
                         },
                         {
-                            "key": "space",
+                            "key": "indoor",
                             "value": "실내난방 모드",
                             "type": "active"
                         },
                         {
-                            "key": "floor",
+                            "key": "ondol",
                             "value": "온돌 모드",
                             "type": "active"
                         }
@@ -30,17 +30,17 @@
                     "value": "mode.value",
                     "alternatives": [
                         {
-                            "key": "outside",
+                            "key": "away",
                             "value": "외출",
                             "type": "active"
                         },
                         {
-                            "key": "space",
+                            "key": "indoor",
                             "value": "실내난방 모드",
                             "type": "active"
                         },
                         {
-                            "key": "floor",
+                            "key": "ondol",
                             "value": "온돌 모드",
                             "type": "active"
                         }
@@ -57,17 +57,17 @@
                 "list": {
                     "alternatives": [
                         {
-                            "key": "outside",
+                            "key": "away",
                             "value": "외출",
                             "type": "active"
                         },
                         {
-                            "key": "space",
+                            "key": "indoor",
                             "value": "실내난방 모드",
                             "type": "active"
                         },
                         {
-                            "key": "floor",
+                            "key": "ondol",
                             "value": "온돌 모드",
                             "type": "active"
                         }
@@ -85,17 +85,17 @@
                 "list": {
                     "alternatives": [
                         {
-                            "key": "outside",
+                            "key": "away",
                             "value": "외출",
                             "type": "active"
                         },
                         {
-                            "key": "space",
+                            "key": "indoor",
                             "value": "실내난방 모드",
                             "type": "active"
                         },
                         {
-                            "key": "floor",
+                            "key": "ondol",
                             "value": "온돌 모드",
                             "type": "active"
                         }
@@ -106,6 +106,6 @@
             }
         ]
     },
-    "id": "aloneabate57300.mode",
+    "id": "voiceaddress44089.thermostatMode",
     "version": 1
 }

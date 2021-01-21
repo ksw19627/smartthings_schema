@@ -10,6 +10,11 @@
                         "type": "active"
                     },
                     {
+                        "key": "D",
+                        "value": "Stp.",
+                        "type": "active"
+                    },
+                    {
                         "key": "F",
                         "value": "°F",
                         "type": "active"
@@ -36,6 +41,11 @@
                     {
                         "key": "C",
                         "value": "°C",
+                        "type": "active"
+                    },
+                    {
+                        "key": "D",
+                        "value": "Stp.",
                         "type": "active"
                     },
                     {
@@ -68,6 +78,11 @@
                             "type": "active"
                         },
                         {
+                            "key": "D",
+                            "value": "Stp.",
+                            "type": "active"
+                        },
+                        {
                             "key": "F",
                             "value": "°F",
                             "type": "active"
@@ -89,6 +104,6 @@
 
             ]
     },
-    "id": "aloneabate57300.currentHotwaterTemperature",
+    "id": "voiceaddress44089.currenthotwatertemperature",
     "version": 1
 }
